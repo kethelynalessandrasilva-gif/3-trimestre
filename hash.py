@@ -4,4 +4,14 @@ def calcula_hash(senha):
         valor = valor + ord(letra)
     return valor
 
-print(calcula_hash("abc"))
+senha_cadastrada = "kethy007"
+hash_cadastrado = calcula_hash(senha_cadastrada)
+print(hash_cadastrado)
+
+senha_digitada = input("digite sua senha:") 
+hash_digitado = calcula_hash(senha_digitada)
+
+if hash_cadastrado == hash_digitado:
+    print("acesso concedido!")
+else:
+    print("senha incorreta!")
